@@ -1,12 +1,12 @@
-import { Container } from '@react-email/container';
-import { Head } from '@react-email/head';
-import { Html } from '@react-email/html';
-import { Img } from '@react-email/img';
-import { Preview } from '@react-email/preview';
-import { Section } from '@react-email/section';
-import { Text } from '@react-email/text';
+const { Container } = require('@react-email/container');
+const { Head } = require('@react-email/head');
+const { Html } = require('@react-email/html');
+const { Img } = require('@react-email/img');
+const { Preview } = require('@react-email/preview');
+const { Section } = require('@react-email/section');
+const { Text } = require('@react-email/text');
 
-export const Email = (props) => {
+const Email = (props) => {
 
     const { email, message } = props
 
@@ -37,7 +37,6 @@ export const Email = (props) => {
         </Html>
     );
 }
-
 
 const fontFamily =
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';
@@ -86,3 +85,5 @@ const review = {
     borderRadius: '4px',
     marginTop: '35px'
 };
+
+export default Email;

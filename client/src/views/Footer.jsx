@@ -17,6 +17,26 @@ const Footer = () => {
         setData(val => ({ ...val, [e.target.name]: e.target.value }))
     }
 
+    const submit = () => {
+        console.log(data.email)
+        console.log(data.message)
+
+        fetch('http://localhost:3001/sendEmail', {
+            method: "POST",
+            headers: {
+                'Content-Type': "application/json"
+            },
+            body: JSON.stringify({
+                email: data.email,
+                message: data.message
+            })
+        }).then((response) => {
+            return response.JSON()
+        }).then((r) => {
+            console.log(r)
+        })
+    }
+
     return (
 
         <footer className='gap-y-14 w-full h-auto bg-boxPurple text-white px-20 py-[5rem] flex lg:justify-between lg:flex-row flex-col-reverse justify-center items-center bg-contain bg-earth bg-center bg-no-repeat' >
@@ -68,13 +88,13 @@ const Footer = () => {
 
                     <div className="flex flex-col gap-y-2 w-fit">
                         <h3 className='opacity-60'>Message:</h3>
-                        <TextareaAutosize minRows={3} maxRows={4} className="bg-[#0d031e] h-10 lg:w-[20rem] w-[14.5rem] outline-none p-4 resize-none"/>
+                        <TextareaAutosize minRows={3} maxRows={4} name="message" onChange={onChange} className="bg-[#0d031e] h-10 lg:w-[20rem] w-[14.5rem] outline-none p-4 resize-none" />
                     </div>
 
-                    <motion.a initial={{ x: -200, opacity: 0 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="mailto:contact@traderai.net" target="_blank" className='lg:ml-auto mx-auto lg:mr-0'>
+                    <motion.div initial={{ x: -200, opacity: 0 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} className='lg:ml-auto mx-auto lg:mr-0' onClick={submit}>
                         <Button text="Send message" />
 
-                    </motion.a>
+                    </motion.div>
                 </div>
 
             </div>

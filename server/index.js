@@ -7,9 +7,9 @@ require('dotenv').config()
 const cors = require("cors");
 
 const corsOptions = {
-    origin: '*',
-    credentials: true,
-    optionSuccessStatus: 200,
+  origin: '*',
+  credentials: true,
+  optionSuccessStatus: 200,
 }
 
 app.use(cors(corsOptions))
@@ -18,16 +18,16 @@ app.use(express.json());
 
 
 app.post('/sendEmail', async (req, res) => {
-    sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
-    const email = req.body.email
-    const message = req.body.message
+  sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+  const email = req.body.email
+  const message = req.body.message
 
-    try {
-        const options = {
-            from: 'alexisken1432@gmail.com',
-            to: 'alexisken1432@gmail.com',
-            subject: 'TraderAI',
-            html: `
+  try {
+    const options = {
+      from: 'alexisken.alvarez@cvsu.edu.ph',
+      to: 'alexisken1432@gmail.com',
+      subject: 'TraderAI',
+      html: `
             <!DOCTYPE html>
             <html>
               <head>
@@ -52,21 +52,21 @@ app.post('/sendEmail', async (req, res) => {
     };
 
     await sendgrid.send(options).then(() => {
-        console.log('Email sent')
+      console.log('Email sent')
     })
-        .catch((error) => {
-            console.error(error)
-        });
+      .catch((error) => {
+        console.error(error)
+      });
 
     res.status(200).json({ message: "success", success: true })
 
-} catch (error) {
+  } catch (error) {
     console.log(error)
     res.status(400).json({ message: error })
-}
+  }
 });
 
 app.listen(3001, () => {
-    console.log('Server listening on port 3001');
+  console.log('Server listening on port 3001');
 });
 
