@@ -13,28 +13,32 @@ const Footer = () => {
         message: ''
     })
 
+    const [debounce, setDebounce] = useState(false)
+
     const onChange = (e) => {
         setData(val => ({ ...val, [e.target.name]: e.target.value }))
     }
 
     const submit = () => {
-        console.log(data.email)
-        console.log(data.message)
-
-        fetch('http://localhost:3001/sendEmail', {
-            method: "POST",
-            headers: {
-                'Content-Type': "application/json"
-            },
-            body: JSON.stringify({
-                email: data.email,
-                message: data.message
+        if (!debounce) {
+            setDebounce(true)
+            fetch('http://localhost:3001/sendEmail', {
+                method: "POST",
+                headers: {
+                    'Content-Type': "application/json"
+                },
+                body: JSON.stringify({
+                    email: data.email,
+                    message: data.message
+                })
+            }).then((response) => {
+                return response.json()
+            }).then((r) => {
+                setData({email: '', message: ''})
+                setDebounce(false)
             })
-        }).then((response) => {
-            return response.JSON()
-        }).then((r) => {
-            console.log(r)
-        })
+        }
+
     }
 
     return (
@@ -88,11 +92,11 @@ const Footer = () => {
 
                     <div className="flex flex-col gap-y-2 w-fit">
                         <h3 className='opacity-60'>Message:</h3>
-                        <TextareaAutosize minRows={3} maxRows={4} name="message" onChange={onChange} className="bg-[#0d031e] h-10 lg:w-[20rem] w-[14.5rem] outline-none p-4 resize-none" />
+                        <TextareaAutosize minRows={3} maxRows={4} name="message" value={data.message} onChange={onChange} className="bg-[#0d031e] h-10 lg:w-[20rem] w-[14.5rem] outline-none p-4 resize-none" />
                     </div>
 
                     <motion.div initial={{ x: -200, opacity: 0 }} animate={{ x: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} className='lg:ml-auto mx-auto lg:mr-0' onClick={submit}>
-                        <Button text="Send message" />
+                        <Button text={debounce ? "Sent!" : "Send message"} />
 
                     </motion.div>
                 </div>
