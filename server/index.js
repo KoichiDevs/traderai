@@ -22,8 +22,6 @@ app.post('/sendEmail', async (req, res) => {
     const email = req.body.email
     const message = req.body.message
 
-    console.log(email)
-
     try {
         const options = {
             from: 'alexisken1432@gmail.com',
@@ -60,7 +58,7 @@ app.post('/sendEmail', async (req, res) => {
             console.error(error)
         });
 
-    res.status(200).json({ message: "SUCCESS", success: true })
+    res.status(200).json({ message: "success", success: true })
 
 } catch (error) {
     console.log(error)
