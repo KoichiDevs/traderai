@@ -25,7 +25,7 @@ app.post('/sendEmail', async (req, res) => {
   try {
     const options = {
       from: 'alexisken.alvarez@cvsu.edu.ph',
-      to: 'alexisken1432@gmail.com',
+      to: 'contact@traderai.net',
       subject: 'TraderAI',
       html: `
             <!DOCTYPE html>
