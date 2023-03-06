@@ -8,6 +8,7 @@ import Tiersystem from './views/Tiersystem'
 import Tokenomics from './views/Tokenomics'
 import Tools from './views/Tools'
 
+
 const App = () => {
   return (
     <div className='bg-hero relative'>

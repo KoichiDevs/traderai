@@ -38,7 +38,7 @@ app.post('/sendEmail', async (req, res) => {
                     display: block;
                     margin-left: auto;
                     margin-right: auto;
-                    width: 50%;
+                    width: 35%;
                   }
                 </style>
               </head>

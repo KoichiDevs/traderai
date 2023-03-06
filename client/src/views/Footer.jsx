@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { SiTwitter } from 'react-icons/si'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { BsFillMegaphoneFill } from 'react-icons/bs'
@@ -22,7 +22,7 @@ const Footer = () => {
     const submit = () => {
         if (!debounce) {
             setDebounce(true)
-            fetch('http://localhost:3001/sendEmail', {
+            fetch(`${import.meta.env.VITE_REACT_APP_BASEURL}/sendEmail`, {
                 method: "POST",
                 headers: {
                     'Content-Type': "application/json"
@@ -34,7 +34,7 @@ const Footer = () => {
             }).then((response) => {
                 return response.json()
             }).then((r) => {
-                setData({email: '', message: ''})
+                setData({ email: '', message: '' })
                 setDebounce(false)
             })
         }
