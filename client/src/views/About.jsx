@@ -57,7 +57,7 @@ const About = () => {
                 })}
             </motion.div>
 
-            <div className="w-fit mx-auto  relative text-white md:mt-[33rem] mt-[5rem] px-10 flex gap-x-10 lg:flex-row flex-col">
+            <div className="w-fit mx-auto  relative text-white md:mt-[33rem] mt-[5rem] px-10 flex gap-x-10 lg:flex-row flex-col px-8">
 
                 <div className="w-full flex items-center justify-center">
                     <motion.div initial={{}} animate={titleView ? { y: [-15, 15] } : {}} transition={{ duration: 1.2, ease: "linear", repeat: Infinity, repeatType: "reverse" }} className="sm:w-[52vh] w-[30vh]" ref={imageRef}>
@@ -85,7 +85,7 @@ const About = () => {
                     </div>
 
 
-                    <div className="font-poppins mt-5 max-w-[45rem] flex flex-col gap-y-4 px-8">
+                    <div className="font-poppins mt-5 max-w-[45rem] flex flex-col gap-y-4">
                         <div className="overflow-hidden">
                             <motion.p initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7, delay: 0.15 }} className="">Trader AI is a cognitive platform powered by artificial intelligence that allows traders to leverage the most advanced predictive models available. The platform provides access to automated trading strategies, as well as comprehensive risk management tools designed to help traders make smarter decisions and be more profitable.</motion.p>
                         </div>
