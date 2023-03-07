@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react'
 import { motion, useSpring, useTransform, useScroll } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Typewriter from 'typewriter-effect';
+import Button from '../components/Button';
+import ButtonShort from '../components/ButtonShort';
 
 const About = () => {
 
@@ -55,10 +57,10 @@ const About = () => {
                 })}
             </motion.div>
 
-            <div className="w-fit mx-auto  relative text-white lg:mt-[33rem] mt-[5rem] px-10 flex gap-x-10 lg:flex-row flex-col">
+            <div className="w-fit mx-auto  relative text-white md:mt-[33rem] mt-[5rem] px-10 flex gap-x-10 lg:flex-row flex-col">
 
                 <div className="w-full flex items-center justify-center">
-                    <motion.div initial={{}} animate={titleView ? { y: [-15, 15] } : {}} transition={{ duration: 1.2, ease: "linear", repeat: Infinity, repeatType: "reverse" }} className="sm:w-[52vh] w-[47vh]" ref={imageRef}>
+                    <motion.div initial={{}} animate={titleView ? { y: [-15, 15] } : {}} transition={{ duration: 1.2, ease: "linear", repeat: Infinity, repeatType: "reverse" }} className="sm:w-[52vh] w-[30vh]" ref={imageRef}>
                         <img src="/about.webp" alt="about" className="w-full h-full object-cover" />
                     </motion.div>
                 </div>
@@ -83,7 +85,7 @@ const About = () => {
                     </div>
 
 
-                    <div className="font-poppins mt-5 max-w-[45rem] flex flex-col gap-y-4">
+                    <div className="font-poppins mt-5 max-w-[45rem] flex flex-col gap-y-4 px-8">
                         <div className="overflow-hidden">
                             <motion.p initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7, delay: 0.15 }} className="">Trader AI is a cognitive platform powered by artificial intelligence that allows traders to leverage the most advanced predictive models available. The platform provides access to automated trading strategies, as well as comprehensive risk management tools designed to help traders make smarter decisions and be more profitable.</motion.p>
                         </div>
@@ -91,8 +93,26 @@ const About = () => {
                         <div className="overflow-hidden">
                             <motion.p initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7, delay: 0.2 }} className="">Trader AI introduces AI which trades for you as accurately as possible various cryptocurrencies.</motion.p>
                         </div>
+
+                        <div className="flex gap-x-3 mt-8 w-fit mx-auto lg:mx-0 md:flex-row flex-col items-center gap-y-5">
+                            <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="" target="_blank" className=''>
+                                <ButtonShort text="Whitepaper" />
+                            </motion.a>
+
+                            <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="https://github.com/cyberscope-io/audits/blob/main/trai/audit.pdf" target="_blank" className=''>
+                                <ButtonShort text="Audit" />
+                            </motion.a>
+
+                            <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="" target="_blank" className=''>
+                                <ButtonShort text="KYC" />
+                            </motion.a>
+                        </div>
+
+
+
+
                     </div>
-                    
+
                 </div>
 
             </div>

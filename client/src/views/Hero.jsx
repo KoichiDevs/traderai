@@ -57,6 +57,8 @@ const Hero = () => {
 
                         <div className='flex gap-x-3 flex-col lg:flex-row items-center justify-center lg:justify-start gap-y-5 mt-10 mx-auto w-fit'>
 
+  
+
                             <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="https://www.pinksale.finance/launchpad/0x897195A57F78c199dCEA7b4248Eb13aB6E3FB182?chain=BSC&refId=0xA9d9006eDD89a0CaC18cBa31BF843103616Dba8f" target="_blank" className=''>
                                 <Button text="Buy Presale" />
                             </motion.a>
@@ -64,17 +66,11 @@ const Hero = () => {
                             <motion.button initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} className='border-[1px] border-white px-12 py-3 w-fit h-fit hover:bg-white hover:text-black cursor-pointer z-10 relative transition-colors ease-in-out duration-300 mx-auto lg:mx-0 font-medium'>
                                 <p>Chart</p>
                             </motion.button>
-                            <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="https://github.com/cyberscope-io/audits/blob/main/trai/audit.pdf" target="_blank" className=''>
-                                <Button text="Audit" />
-                            </motion.a>
 
-                            <motion.button initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} className='border-[1px] border-white px-12 py-3 w-fit h-fit hover:bg-white hover:text-black cursor-pointer z-10 relative transition-colors ease-in-out duration-300 mx-auto lg:mx-0 font-medium'>
-                                <p>KYC</p>
-                            </motion.button>
 
                         </div>
 
-                        <Clock/>
+                        <Clock />
 
                     </div>
                 </div>
