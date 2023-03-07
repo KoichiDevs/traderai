@@ -92,9 +92,7 @@ const About = () => {
                             <motion.p initial={{ y: 50, opacity: 0 }} animate={titleView ? { y: 0, opacity: 100 } : {}} transition={{ duration: 0.7, delay: 0.2 }} className="">Trader AI introduces AI which trades for you as accurately as possible various cryptocurrencies.</motion.p>
                         </div>
                     </div>
-                    <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="https://github.com/cyberscope-io/audits/blob/main/trai/audit.pdf" target="_blank" className=''>
-                                <Button text="Audit" />
-                            </motion.a>
+                    
                 </div>
 
             </div>
