@@ -95,7 +95,7 @@ const About = () => {
                         </div>
 
                         <div className="flex gap-x-3 mt-8 w-fit mx-auto lg:mx-0 md:flex-row flex-col items-center gap-y-5">
-                            <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="" target="_blank" className=''>
+                            <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="https://trader-ai-whitepaper.gitbook.io/trader-ai-whitepaper-version-1/" target="_blank" className=''>
                                 <ButtonShort text="Whitepaper" />
                             </motion.a>
 
@@ -103,7 +103,7 @@ const About = () => {
                                 <ButtonShort text="Audit" />
                             </motion.a>
 
-                            <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="" target="_blank" className=''>
+                            <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="https://pinksale.notion.site/Trader-AI-KYC-Verification-484ae82c63ee474889722e9a6b0d72a8" target="_blank" className=''>
                                 <ButtonShort text="KYC" />
                             </motion.a>
                         </div>
