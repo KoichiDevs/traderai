@@ -59,7 +59,7 @@ const Hero = () => {
 
   
 
-                            <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="https://www.pinksale.finance/launchpad/0x897195A57F78c199dCEA7b4248Eb13aB6E3FB182?chain=BSC&refId=0xA9d9006eDD89a0CaC18cBa31BF843103616Dba8f" target="_blank" className=''>
+                            <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="https://www.pinksale.finance/launchpad/0x000ac99e76cae9b050e6a824c142d7636572eaf0?chain=BSC&refId=0xAF05c0d3DA8B7C3f9a067fBBE65cDB599d955EcA" target="_blank" className=''>
                                 <Button text="Buy Presale" />
                             </motion.a>
 
