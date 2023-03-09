@@ -4,7 +4,7 @@ import TimeBox from './Timebox';
 
 const Clock = () => {
 
-    const [expiryTime, setExpiryTime] = useState("8 mar 2023 17:00:00 UTC");
+    const [expiryTime, setExpiryTime] = useState("10 mar 2023 17:00:00 UTC");
     const [countdownTime, setCountdownTime] = useState({
         countdownDays: "",
         countdownHours: "",
@@ -52,7 +52,7 @@ const Clock = () => {
 
     return (
         <div className='text-white'>
-            <h2 className='text-center mt-10 font-bold text-2xl text-header uppercase font-saira'>Pre-sale Starts In</h2>
+            <h2 className='text-center mt-10 font-bold text-2xl text-header uppercase font-saira'>Pre-sale Ends In</h2>
 
             <div className='flex sm:gap-x-4 gap-x-2 mx-auto w-fit mt-5'>
                 <TimeBox time={countdownTime.countdownDays} label="Days" />
