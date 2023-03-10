@@ -17,7 +17,7 @@ const Tokenomics = () => {
     const tokenList = [
         {
             label: "Token Symbol",
-            desc: "$TRADER"
+            desc: "$TRAI"
         },
         {
             label: "Total supply",

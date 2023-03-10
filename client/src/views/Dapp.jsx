@@ -13,7 +13,7 @@ const Dapp = () => {
 
     const dappList = [
         {
-            text: 'How many $TRADER tokens do they have',
+            text: 'How many $TRAI tokens do they have',
             icon: <RiNumbersFill />
         },
         {

@@ -57,7 +57,7 @@ const About = () => {
                 })}
             </motion.div>
 
-            <div className="w-fit mx-auto  relative text-white md:mt-[33rem] mt-[5rem] px-10 flex gap-x-10 lg:flex-row flex-col px-8">
+            <div className="w-fit mx-auto  relative text-white md:mt-[33rem] mt-[5rem] flex gap-x-10 lg:flex-row flex-col px-8">
 
                 <div className="w-full flex items-center justify-center">
                     <motion.div initial={{}} animate={titleView ? { y: [-15, 15] } : {}} transition={{ duration: 1.2, ease: "linear", repeat: Infinity, repeatType: "reverse" }} className="sm:w-[52vh] w-[30vh]" ref={imageRef}>
