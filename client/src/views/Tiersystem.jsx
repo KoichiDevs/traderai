@@ -49,7 +49,7 @@ const Tiersystem = () => {
                     <p className="w-full">It is similar to an entry fee, where different functionalities will be offered depending on the level. There is currently one way to join:</p>
                 </div>
                 <div className="w-fit mx-auto mt-10">
-                    <FadeBoxMessage text="By purchasing our $TRADER token. Once you have purchased the amount required for the entry of one of the 3 levels, all its functionalities will be unlocked. You will always have the option to upgrade to a higher level by adjusting the amount of $TRADER owned. They will also be able to withdraw the $TRADER they purchased, thus losing access to the investment platform." />
+                    <FadeBoxMessage text="By purchasing our $TRAI token. Once you have purchased the amount required for the entry of one of the 3 levels, all its functionalities will be unlocked. You will always have the option to upgrade to a higher level by adjusting the amount of $TRAI owned. They will also be able to withdraw the $TRAI they purchased, thus losing access to the investment platform." />
                 </div>
 
 
