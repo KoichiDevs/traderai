@@ -57,7 +57,7 @@ const Hero = () => {
 
                         <div className='flex gap-x-3 flex-col lg:flex-row items-center justify-center lg:justify-start gap-y-5 mt-10 mx-auto w-fit'>
 
-  
+
 
                             <motion.a initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 100 }} transition={{ duration: 1, delay: 0.15 }} href="https://www.pinksale.finance/launchpad/0x000ac99e76cae9b050e6a824c142d7636572eaf0?chain=BSC&refId=0xAF05c0d3DA8B7C3f9a067fBBE65cDB599d955EcA" target="_blank" className=''>
                                 <Button text="Buy Presale" />
@@ -70,7 +70,7 @@ const Hero = () => {
 
                         </div>
 
-                        <Clock />
+                        {/* <Clock /> */}
 
                     </div>
                 </div>
